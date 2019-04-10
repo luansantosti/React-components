@@ -1,9 +1,16 @@
-# React
+# ReactJS
+Just some simple components in reactjs for study.
 
-- npm install
-- npm start
+To install the project
+```
+npm install
+```
+To run the project
+```
+npm start
+```
 
-# Components
+# Components in the project
 
 - Chip Contact
 - Card
