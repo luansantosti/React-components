@@ -1,5 +1,5 @@
 # ReactJS
-Just some simple components in reactjs for study.
+Some simple components in reactjs for study.
 
 To install the project
 ```
