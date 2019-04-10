@@ -10,7 +10,7 @@ To run the project
 npm start
 ```
 
-# Components in the project
+### Components in the project
 
 - Chip Contact
 - Card
