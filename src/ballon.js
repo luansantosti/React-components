@@ -19,7 +19,7 @@ const BallonItem = styled.div`
   padding: 3px 7px;
   border-radius: 5px;
   font-size: 0.7em;
-  left: ${props => props.x}px;
+  left: ${props => props.x + 20}px;
   top: calc(${props => props.y}px - 10px);
   &:after {
     right: 100%;
@@ -45,18 +45,19 @@ class Ballon extends Component {
       x: 0,
       y: 0
     }
+    this.referral = React.createRef();
   }
 
   _onMouseMove(e) {
     this.setState({
-      x: e.screenX,
+      x: e.screenX - this.referral.current.getBoundingClientRect().left,
       y: e.nativeEvent.offsetY
     })
   }
   
   render() {
     return (
-      <Container>
+      <Container ref={this.referral}>
         <BallonItem visible={this.state.isVisible} x={this.state.x} y={this.state.y}>
           {this.props.text}
         </BallonItem>
